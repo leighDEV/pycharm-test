@@ -331,10 +331,10 @@
 #     print(y)  # by default, range always starts with 0
 
 # nested keyword - a loop within a loop
-# enemy = ["Nicos", "Sabinet", "Sean", "Wilmarx", "Bendana"]
+# other_team = ["John", "Janna", "Jane", "Joe", "Jake"]
 #
 # for x in names:
-#     for y in enemy:
+#     for y in other_team:
 #         print(x, y)
 
 # while loops - used to iterate until it becomes false

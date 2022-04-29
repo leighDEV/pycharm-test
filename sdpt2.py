@@ -83,10 +83,10 @@
 # # sequencing is very important, sabi sa tutorial
 # duplicate = names + group_members
 # print("Combined list:", duplicate)
-# enemy = ["Nicos", "Sabinet", "Sean"]
-# print(enemy.extend(group_members))  # not working? output is None
-# enemy.append(group_members)
-# print(enemy)  # append list inside a list
+# other_team = ["John", "Janna", "Jane"]
+# print(other_team.extend(group_members))  # not working? output is None
+# other_team.append(group_members)
+# print(other_team)  # append list inside a list
 # names.reverse()  # reversing the items in list
 # print(names)
 # # print(names.reverse()) - I think this is not working when I put the function inside print function? Output is None
@@ -120,7 +120,7 @@
 # tup_courses = ("BSCS", "BSIT", "BSIS")
 # print(tup_courses)
 # del tup_courses
-# tup_names = ("Leigh", "Kurt", "Nicko", ("Nicos", "Sabinet", "Sean"))  # nested tuples
+# tup_names = ("Leigh", "Kurt", "Nicko", ("John", "Janna", "Jane"))  # nested tuples
 # print(tup_names[3])
 #
 # # casting tuples and lists
@@ -323,15 +323,15 @@
 
 # # collection conditional statements
 # name = ["Leigh", "Kurt", "Nicko"]
-# enemy = ("Nicos", "Sabinet", "Sean", "Kurt")
+# other_team = ("John", "Janna", "Jane", "Joe")
 #
 # search = input("Enter name: ")
-# if search in name and search in enemy:
+# if search in name and search in other_team:
 #     print(search, "is in the two collections.")
 # elif search in name:
 #     print(search, "is in the name list.")
-# elif search in enemy:
-#     print(search, "is in the enemy tuple.")
+# elif search in other_team:
+#     print(search, "is in the other_team tuple.")
 # else:
 #     print(search, "is not in the two list.")
 
