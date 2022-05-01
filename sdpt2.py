@@ -8,8 +8,8 @@
 # print(first_name + last_name)
 # deci = 12.3300
 # print(deci)
-# cannot concatenate int
-
+# # cannot concatenate int
+#
 # jaja = "Jaja"
 # num = 3
 # print(jaja + str(num))
@@ -17,8 +17,8 @@
 # # user input is always in string format
 # name = input("Enter name: ")
 # print("Welcome, " + name)
-# x = input("Enter first num: ")
-# y = input("Enter second num: ")
+# t = input("Enter first num: ")
+# r = input("Enter second num: ")
 # print(int(x) + int(y))
 #
 # salary = input("Enter salary: ")
@@ -28,7 +28,7 @@
 # yy = 23.33
 # dd = 3
 # print(yy + dd)
-
+#
 # xx = float(input("Enter first num: "))
 # yy = float(input("Enter second num: "))
 # ope = input("Enter operator: ")
@@ -44,11 +44,11 @@
 #     print(xx / yy)
 # else:
 #     print("Wrong operator.")
-
-
-# PART 3: LIST AND TUPLES
-# list - a read and write collection of variables
-# names = ["Leigh", "Kurt", "Nicko", "Harry", "Hermione"]
+#
+#
+# # PART 3: LIST AND TUPLES
+# # list - a read and write collection of variables
+# names = ["Leigh", "Inna", "Jam", "Harry", "Hermione"]
 # print(names[2:])
 # print(names[:3])  # end index item is excluded
 # print(names[1:4])
@@ -72,11 +72,11 @@
 # del names[2]  # deletes item bases on index
 # print(names)
 # del names  # deletes whole list
-# names = ["Leigh", "Kurt", "Nicko"]
+# names = ["Leigh", "Inna", "Jam"]
 # print(names)
 # print(names.clear())  # clear all items in list but not list, output is None
 # print(names)  # output is square brackets
-# names = ["Leigh", "Kurt", "Nicko"]
+# names = ["Leigh", "Inna", "Jam"]
 # group_members = names.copy()  # copying the items in names to this list
 # print("Names list:", names)
 # print("Group members:", group_members)
@@ -120,7 +120,7 @@
 # tup_courses = ("BSCS", "BSIT", "BSIS")
 # print(tup_courses)
 # del tup_courses
-# tup_names = ("Leigh", "Kurt", "Nicko", ("John", "Janna", "Jane"))  # nested tuples
+# tup_names = ("Leigh", "Inna", "Jam", ("John", "Janna", "Jane"))  # nested tuples
 # print(tup_names[3])
 #
 # # casting tuples and lists
@@ -128,10 +128,10 @@
 # courses = tuple(courses)
 # print(tup_names)
 # print(courses)
-
-# PART 4: SETS
-# sets - partially writable, and it's unordered and un-indexed.
-
+#
+# # PART 4: SETS
+# # sets - partially writable, and it's unordered and un-indexed.
+#
 # evenNum = {2, 4, 8, 10}
 # print(evenNum)
 # print(len(evenNum))  # can also use some builtin functions like list
@@ -167,8 +167,8 @@
 # print(evenNum)
 #
 # del evenNum  # deletes the set
-
-# union set
+#
+# # union set
 # set_one = {1, 3, 5, 7, 9}
 # set_two = {4, 8, 6, 10, 2}
 # set_union = set_one.union(set_two)  # combine two sets
@@ -220,8 +220,8 @@
 #
 # # nested sets
 # set_nes = {1, 2, 3, {4, 5, 6}}  # unhashable type: set
-
-
+#
+#
 # # PART 5: DICTIONARY | LIST OF DICTIONARIES
 # # a collection of Key Pairs that is unordered , changeable and indexed
 # student_one = {
@@ -231,7 +231,7 @@
 # }
 #
 # student_two = {
-#     "name": "Kurt",
+#     "name": "Inna",
 #     "age": 18,
 #     "course": "BSIT"
 # }
@@ -289,7 +289,7 @@
 # print(student_four)
 # print(student_four.get("grades").get("math"))  # getting the item from the nested dict
 #
-
+#
 # # PART 6: CONDITIONAL STATEMENTS
 # name = input("Enter name: ")
 # age = int(input("Enter age: "))
@@ -311,18 +311,18 @@
 #     print("You are so bobo.")
 # else:
 #     print("Thumbs up!")
-
+#
 # # logical operators
 # username = input("Enter username: ")
 # password = input("Enter password: ")
 #
-# if (username == "leighter" and password == "asdf") or (username == "kurty" and password == "qwer"):
+# if (username == "leighter" and password == "asdf") or (username == "Innay" and password == "qwer"):
 #     print("Welcome,", username)
 # else:
 #     print("Login failed.")
-
+#
 # # collection conditional statements
-# name = ["Leigh", "Kurt", "Nicko"]
+# name = ["Leigh", "Inna", "Jam"]
 # other_team = ("John", "Janna", "Jane", "Joe")
 #
 # search = input("Enter name: ")
@@ -334,28 +334,151 @@
 #     print(search, "is in the other_team tuple.")
 # else:
 #     print(search, "is not in the two list.")
+#
+# # challenge
+# print("Enter grades")
+# math = int(input("Math: "))
+# science = int(input("Science: "))
+# tech = int(input("Tech: "))
+#
+# avg = (math + science + tech) / 3
+# print("Average:", str(round(avg)))
+#
+# if avg > 100 or avg <= 50:
+#     print("Invalid Grade")
+# elif avg >= 98:
+#     print("With Highest Honor")
+# elif avg >= 95:
+#     print("With High Honors")
+# elif avg >= 90:
+#     print("With Honors")
+# elif avg >= 75:
+#     print("Passed")
+# else:
+#     print("Failed")
+#
+#
+# # PART 7: WHILE LOOP AND BREAK STATEMENT
+# i = 0
+# while i < 10:
+#     i += 1
+#     if i == 6:
+#         continue
+#     print(i)
+# else:
+#     print("while loop end")
+#
+# age = 1
+# while age < 18:
+#     print("Minor:", age)
+#     age += 1
+# else:  # run once
+#     print("Legal age:", age)
+#
+# # while loop in collections
+# odd = [1, 3, 5, 7, 9]
+#
+# a = 0
+# while a < len(odd):
+#     print(odd[a])
+#     a += 1
+#
+# # conditions in while loop
+# print("Do your crush like you too?")
+# while True:  # infinity unless you use break keyword
+#     answer = input("Answer: ")
+#     if answer == "No":
+#         print("HAHAHAHAHAHAHHAHAHA")
+#         break
+#     elif answer == "Yes":
+#         print("Hmmmm.")
+#     else:
+#         print("Yes or No")
+#
+# print("Odd or even?")
+# num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# i = 0
+# while i < len(num):
+#     if num[i] % 2 == 0:
+#         print(num[i], "is an even number.")
+#     else:
+#         print(num[i], "is an odd number.")
+#     i += 1
+#
+# # challenge - math quiz game
+# print("What is the root of 64?")
+#
+# lives = 3
+# while True:
+#     print("Lives:", lives)
+#     answer = int(input("Answer: "))
+#     print()
+#     if not answer == 8:
+#         lives -= 1
+#         if lives == 0:
+#             print("Game over.")
+#             break
+#     else:
+#         print("You are correct!")
+#         break
+#
+#
+# # PART 8: FOR LOOP AND BREAK KEYWORD
+# fruits = ["apples", "banana", "grapes", "mango", "strawberry"]
+# for x in fruits:
+#     print(x)
+# else:
+#     print("No more fruits.")
+#
+# # break keyword in for loop
+# for x in range(10):
+#     if x == 5:
+#         break
+#     print(x)  # does not include 5 and so on
+#
+# # conditions in for loop
+# for x in fruits:
+#     if x == "grapes":
+#         continue  # skips grapes
+#     print(x)
+#
+# num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# for n in num:
+#     if n % 2 == 1:
+#         print(n, "is an odd number.")
+#     else:
+#         print(n, "is an even number.")
+#
+# # range in for loop
+# for x in range(5):
+#     print(x)
+#
+# # challenge: account authentication simulation
+# usernames = ["leigh", "inna", "jamolin"]
+# passwords = ["qwer", "asdf", "zxcv"]
+#
+# username = input("Enter username: ")
+# password = input("Enter password: ")
+#
+# for x in range(len(usernames)):
+#     if username == usernames[x] and password == passwords[x]:
+#         print("\nWelcome,", username + "!")
+#         break
+# else:
+#     print("Account not found.")
 
-# challenge
-print("Enter grades")
-math = int(input("Math: "))
-science = int(input("Science: "))
-tech = int(input("Tech: "))
+print()
+# PART 9: NESTED FOR LOOP
+# a for loop inside a for loop
 
-avg = (math + science + tech) / 3
-print("Average:", str(round(avg)))
+# using range
+for x in range(5):
+    for y in range(5):
+        print("*" * x, end="")
+    print()
 
-if avg > 100 or avg <= 50:
-    print("Invalid Grade")
-elif avg >= 98:
-    print("With Highest Honor")
-elif avg >= 95:
-    print("With High Honors")
-elif avg >= 90:
-    print("With Honors")
-elif avg >= 75:
-    print("Passed")
-else:
-    print("Failed")
-
-
-# PART 7: WHILE LOOP AND BREAK STATEMENT
+# multiplication table
+# for x in range(1, 11):
+#     for y in range(1, 11):
+#         print(x, "x", y, "=", (x * y))
+#     print()
