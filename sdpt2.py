@@ -686,16 +686,24 @@
 # print("Student #1")
 # students_info(fname=fname, lname=lname, course=course, age=age)  # no certain order
 #
+#
+# # challenge - summation program
+#
+#
+# def summation(*num):
+#     x = 0
+#     for n in num:
+#         x += n
+#     return x
+#
+#
+# print(summation(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
 
-# challenge - summation program
+# LAMBDA - small anonymous function that can take any amount of arguments but can only have one expression
+add = lambda x, y: x + y
+print(add(1, 2))
+print(add(2, 3))
 
-
-def summation(*num):
-    x = 0
-    for n in num:
-        x += n
-    return x
-
-
-print(summation(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
-
+# challenge - triple any number
+triple = lambda x: x * 3
+print(triple(int(input("Enter any number: "))))
