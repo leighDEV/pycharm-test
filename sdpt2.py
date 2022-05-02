@@ -700,10 +700,10 @@
 # print(summation(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
 
 # LAMBDA - small anonymous function that can take any amount of arguments but can only have one expression
-add = lambda x, y: x + y
-print(add(1, 2))
-print(add(2, 3))
-
-# challenge - triple any number
-triple = lambda x: x * 3
-print(triple(int(input("Enter any number: "))))
+# add = lambda x, y: x + y
+# print(add(1, 2))
+# print(add(2, 3))
+#
+# # challenge - triple any number
+# triple = lambda x: x * 3
+# print(triple(int(input("Enter any number: "))))
