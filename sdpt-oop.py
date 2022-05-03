@@ -106,62 +106,221 @@
 # user_two.introduce()
 # user_two.full_profile()
 #
+#
+# # PART 16: INHERITANCE
+# class Employee:
+#     def __init__(self, name, job, salary):
+#         self.name = name
+#         self.job = job
+#         self.salary = salary
+#
+#     def introduce(self):
+#         print(f"Hi, my name is {self.name}")
+#
+#     def full_profile(self):
+#         print(f"Name: {self.name}\nJob: {self.job}\nSalary: {self.salary}")
+#
+#
+# class Engineer(Employee):  # child class of Employee class
+#     def __init__(self, name, job, salary, category, tools):  # adding attributes
+#         super().__init__(name, job, salary)  # pertaining to parent's params
+#         self.category = category
+#         self.tools = tools
+#
+#     def introduce(self):
+#         super().introduce()
+#         print(end=f", a {self.category}. I'm using {self.tools}.")  # used end= so this will attach to the code above
+#
+#     def full_profile(self):  # overriding methods
+#         super().full_profile()  # getting the codes from parent's full profile's method
+#         print(f"Category: {self.category}\nTools: {self.tools}")  # adding this to the code in that method
+#
+#
+# class Teacher(Employee):
+#     def __init__(self, name, job, salary, school, position):
+#         super().__init__(name, job, salary)
+#         self.school = school
+#         self.position = position
+#
+#     def introduce(self):
+#         print(f"Hi, my name is {self.name}, a {self.position} from {self.school}.")
+#
+#     def full_profile(self):
+#         print(f"School: {self.school}\nPosition: {self.position}")
+#         super().full_profile()  # it can be placed before or after the added code
+#
+#     def cheer_school(self):  # added a new method that is not inside a parent class
+#         print(f"Go, {self.school}! Go! Go! Go!")
+#
+#
+# emp_one = Employee("Harry", "Manager", 200000)
+# emp_one.introduce()
+# emp_one.full_profile()
+#
+# eng_one = Engineer("Leigh", "Engineer", 150000, "Software Engineer", "IDEs")
+# eng_one.introduce()
+# eng_one.full_profile()
+#
+# # prompting a user then using it as arguments
+# teach_name = input("Enter name: ")
+# teach_job = input("Enter job: ")
+# teach_salary = int(input("Enter salary: "))
+# teach_school = input("Enter school: ")
+# teach_position = input("Enter position: ")
+#
+# teach_one = Teacher(teach_name, teach_job, teach_salary, teach_school, teach_position)
+# teach_one.introduce()
+# teach_one.full_profile()
+# teach_one.cheer_school()
+#
+#
+# # PART 17: COLLECTION OF OBJECTS
+#
+# # creating object by user input (example above)
+#
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#         print(f"{self.name} created!")
+#
+#     def introduce(self):
+#         print(f"Hi, my name is {self.name}, {self.age} years old.")
+#
+#
+# p_one = Person("Leigh", 19)
+# p_two = Person("Inna", 20)
+# p_three = Person("Jamolin", 22)
+# p_four = Person("Hermione", 27)
+#
+# # store objects in a collection
+# person_list = [p_one, p_two, p_three, p_four]
+#
+# # reading objects in a collection
+# print(person_list[0].name)
+# person_list[1].introduce()  # the reason why there's sometimes None in the console
+# # is because you use print when there's already print in the method
+#
+# # using loop to read collections
+# for person in person_list:
+#     person.introduce()
+#
+# # using loop to write collections
+# for i in range(5):
+#     name = input("Enter name: ")
+#     age = int(input("Enter age: "))
+#     p = Person(name, age)
+#     person_list.append(p)
+#
+# for person in person_list:
+#     person.introduce()
+#
+#
+# # try
+#
+# class ProgrammingLanguage:
+#     def __init__(self, pname, p_ide):
+#         self.pname = pname
+#         self.p_ide = p_ide
+#         print(f"{self.pname} created!\n")
+#
+#     def info(self):
+#         print(f"Name: {self.pname}\nIDE: {self.p_ide}")
+#
+#
+# p_list = []
+#
+# num = int(input("Enter how many: "))
+# for i in range(num):
+#     name = input("Enter name: ")
+#     ide = input("Enter ide: ")
+#     pl = ProgrammingLanguage(name, ide)
+#     p_list.append(pl)
+#
+# print("Programming Languages:")
+# i = 1
+# for p in p_list:
+#     print(f"#{i}")
+#     p.info()
+#     print()
+#     i += 1
+#
+#
+# # challenge - student registration program
+#
+# class Student:
+#     def __init__(self, name, course, year, section):
+#         self._name = name
+#         self._course = course
+#         self._year = year
+#         self._section = section
+#         print(f"{self._name} created!\n")
+#
+#     def introduce(self):
+#         print(f"Name   : {self._name}")
+#         print(f"Course : {self._course}")
+#         print(f"Year   : {self._year}")
+#         print(f"Section: {self._section}")
+#
+#
+# student_list = []
+# while True:
+#     add = input("Add? (Y/N): ")
+#     if add == 'Y':
+#         name = input("Enter name: ")
+#         course = input("Enter course: ")
+#         year = input("Enter year: ")
+#         section = input("Enter section: ")
+#         students = Student(name, course, year, section)
+#         student_list.append(students)
+#     elif add == 'N':
+#         print("\nStudents in the list:")
+#         i = 0
+#         for student in student_list:
+#             i += 1
+#             print(f"Student #{i}")
+#             student.introduce()
+#             print()
+#         break
+#     else:
+#         print("Wrong input.")
+#
 
-# PART 16: INHERITANCE
-class Employee:
-    def __init__(self, name, job, salary):
+# solutions from tutorial
+class Student:
+    def __init__(self, name, course, year, section):
         self.name = name
-        self.job = job
-        self.salary = salary
+        self.course = course
+        self.year = year
+        self.section = section
 
     def introduce(self):
-        print(f"Hi, my name is {self.name}")
-
-    def full_profile(self):
-        print(f"Name: {self.name}\nJob: {self.job}\nSalary: {self.salary}")
-
-
-class Engineer(Employee):  # child class of Employee class
-    def __init__(self, name, job, salary, type, tools):  # adding attributes
-        super().__init__(name, job, salary)  # pertaining to parent's params
-        self.type = type
-        self.tools = tools
-
-    def introduce(self):
-        super().introduce()
-        print(end=f", a {self.type}. I'm using {self.tools}.")  # used end= so this will attach to the code above
-
-    def full_profile(self):  # overriding methods
-        super().full_profile()  # getting the codes from parent's full profile's method
-        print(f"Type: {self.type}\nTools: {self.tools}")  # adding this to the code in that method
+        print(f"     Name   : {self.name}")
+        print(f"     Course : {self.course}")
+        print(f"     Year   : {self.year}")
+        print(f"     Section: {self.section}")
 
 
-class Teacher(Employee):
-    def __init__(self, name, job, salary, school, position):
-        super().__init__(name, job, salary)
-        self.school = school
-        self.position = position
+student_list = []
+while True:
+    print()
+    name = input("Name: ")
+    course = input("Course: ")
+    year = input("Year: ")
+    section = input("Section: ")
+    s = Student(name, course, year, section)
+    student_list.append(s)
 
-    def introduce(self):
-        print(f"Hi, my name is {self.name}, a {self.position} from {self.school}.")
+    print()
+    choice = input("Create another student? [Y/Any Char]: ")
+    if choice == 'Y' or choice == 'y':
+        pass
+    else:
+        break
 
-    def full_profile(self):
-        print(f"School: {self.school}\nPosition: {self.position}")
-        super().full_profile()  # it can be placed before or after the added code
-
-    def cheer_school(self):  # added a new method that is not inside a parent class
-        print(f"Go, {self.school}! Go! Go! Go!")
-
-
-emp_one = Employee("Harry", "Manager", 200000)
-emp_one.introduce()
-emp_one.full_profile()
-
-eng_one = Engineer("Leigh", "Engineer", 150000, "Software Engineer", "IDEs")
-eng_one.introduce()
-eng_one.full_profile()
-
-teach_one = Teacher("Hermione", "Teacher", 70000, "Hogwarts", "Teacher III")
-teach_one.introduce()
-teach_one.full_profile()
-teach_one.cheer_school()
+i = 1
+for student in student_list:
+    print()
+    print(f"Student #{str(i)}")
+    student.introduce()
+    i = i + 1
