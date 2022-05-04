@@ -7,3 +7,6 @@ class Student:
 
     def introduce(self):
         print(f"Hi, I'm {self._name}, {self._age}, years old")
+
+
+admin = Student("Inna", 19, "BSCS", 'A')
