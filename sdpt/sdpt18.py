@@ -1,5 +1,7 @@
-from sdpt18lib.arithmetic import add as a  # import certain function(can also variable, objects, etc)
-import sdpt18lib.objects as o  # used as keyword to simplify the name
+# PART 18: SCOPING AND IMPORTING | USING OTHER FILES AS DIRECTORIES
+
+from ownlib.arithmetic import add as a  # import certain function(can also variable, objects, etc)
+import ownlib.objects as o  # used as keyword to simplify the name
 
 
 num1 = int(input("Enter first number: "))

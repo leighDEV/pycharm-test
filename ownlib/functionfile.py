@@ -16,4 +16,3 @@ def exponent(x, y):
 
 def kneel():
     return "kneeling..."
-

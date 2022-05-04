@@ -2,9 +2,9 @@
 # - ultimate way of keeping code short, clean, and readable
 import datetime
 
-from sdpt18lib.objects import *  # asterisk means all but you can just write like below
-# import sdpt18lib.objects as o
-from sdpt18lib.arithmetic import add as a  # importing add function only and alias it to a
+from ownlib.objects import *  # asterisk means all but you can just write like below
+# import ownlib.objects as o
+from ownlib.arithmetic import add as a  # importing add function only and alias it to a
 
 first_num = int(input("Enter first num: "))
 second_num = int(input("Enter second num: "))
@@ -24,8 +24,8 @@ print(dir(admin))  # returns a lists of valid attributes of the obj
 
 
 # CODING EXERCISES
-from sdpt18lib.functionfile import say_hi as hi
-from sdpt18lib.functionfile import say_hello as hello
+from ownlib.functionfile import say_hi as hi
+from ownlib.functionfile import say_hello as hello
 
 print(hi())
 print(hello())
